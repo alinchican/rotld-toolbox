@@ -29,25 +29,17 @@ test("should reject with domain name with subdomain that has a Romanian tld and 
   ).rejects.toBeInstanceOf(Error);
 });
 
-test(
-  "should resolve with whois data on domain name with Romanian tld and reserved RoTLD second level domain",
-  () => {
-    return expect(queryRoTLDWhoisServer("ș.www.ro")).resolves.toMatch(
-      /The WHOIS service offered by ROTLD/
-    );
-  },
-  5000
-);
+test("should resolve with whois data on domain name with Romanian tld and reserved RoTLD second level domain", () => {
+  return expect(queryRoTLDWhoisServer("ș.www.ro")).resolves.toMatch(
+    /The WHOIS service offered by ROTLD/
+  );
+});
 
-test(
-  "should resolve with whois data on domain name with Romanian tld",
-  () => {
-    return expect(queryRoTLDWhoisServer("ș.ro")).resolves.toMatch(
-      /The WHOIS service offered by ROTLD/
-    );
-  },
-  5000
-);
+test("should resolve with whois data on domain name with Romanian tld", () => {
+  return expect(queryRoTLDWhoisServer("ș.ro")).resolves.toMatch(
+    /The WHOIS service offered by ROTLD/
+  );
+});
 
 // eslint-disable-next-line jest/no-disabled-tests
 test.skip("should reject on connection error", () => {
