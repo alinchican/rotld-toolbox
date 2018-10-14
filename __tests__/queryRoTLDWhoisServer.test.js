@@ -31,13 +31,13 @@ test("should reject with domain name with subdomain that has a Romanian tld and 
 
 test("should resolve with whois data on domain name with Romanian tld and reserved RoTLD second level domain", () => {
   return expect(queryRoTLDWhoisServer("ș.www.ro")).resolves.toMatch(
-    /Whois Server Version 3.0/
+    /The WHOIS service offered by ROTLD/
   );
 });
 
 test("should resolve with whois data on domain name with Romanian tld", () => {
   return expect(queryRoTLDWhoisServer("ș.ro")).resolves.toMatch(
-    /Whois Server Version 3.0/
+    /The WHOIS service offered by ROTLD/
   );
 });
 
