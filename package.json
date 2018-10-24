@@ -1,6 +1,6 @@
 {
   "name": "rotld-toolbox",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "index.js",
   "engines": {
     "node": ">=7.0.0"
