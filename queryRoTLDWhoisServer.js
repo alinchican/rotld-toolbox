@@ -19,13 +19,9 @@ const queryRoTLDWhoisServer = domainName =>
       reject(new Error("Can't query a domain name that contains a subdomain."));
     }
 
-    const connection = net.connect(
-      43,
-      "whois.rotld.ro",
-      () => {
-        connection.write(`${toASCII(domainName)}\r\n`);
-      }
-    );
+    const connection = net.connect(43, "whois.rotld.ro", () => {
+      connection.write(`${toASCII(domainName)}\r\n`);
+    });
 
     connection.on("data", data => {
       whoisResult += data.toString();
