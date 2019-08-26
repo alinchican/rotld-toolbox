@@ -1,3 +1,7 @@
+## 3.0.2 (August 26, 2019)
+
+Update dependencies.
+
 ## 3.0.1 (October 24, 2018)
 
 Update dependencies.
