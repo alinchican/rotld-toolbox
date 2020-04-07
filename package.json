@@ -12,7 +12,7 @@
     "prepack": "yarn test"
   },
   "dependencies": {
-    "camelcase": "^5.3.1",
+    "camelcase": "^6.0.0",
     "punycode": "^2.1.1"
   },
   "devDependencies": {
